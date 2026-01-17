@@ -1,0 +1,59 @@
+# Source files (compiled output in dist/ is published)
+*.ts
+!*.d.ts
+
+# Development files
+.eslintrc.js
+.prettierrc
+tsconfig.json
+gulpfile.js
+
+# Test files
+test/
+coverage/
+.nyc_output/
+*.test.ts
+*.spec.ts
+
+# Scripts
+scripts/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+
+# Documentation source (compiled docs are published)
+docs/
+
+# Examples that shouldn't be in package
+examples/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+Jenkinsfile
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

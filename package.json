@@ -1,0 +1,90 @@
+{
+  "name": "n8n-nodes-oasys",
+  "version": "1.0.0",
+  "description": "A comprehensive n8n community node for Oasys blockchain providing 16 resources and 100+ operations for Hub L1 staking, Verse L2 gaming, cross-layer bridging, NFT management, and enterprise game studio integrations.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "oasys",
+    "blockchain",
+    "web3",
+    "gaming",
+    "nft",
+    "layer2",
+    "verse",
+    "hub",
+    "staking",
+    "bridge",
+    "sega",
+    "bandai-namco",
+    "ubisoft"
+  ],
+  "license": "BUSL-1.1",
+  "homepage": "https://github.com/Velocity-BPA/n8n-nodes-oasys",
+  "author": {
+    "name": "Velocity BPA",
+    "email": "licensing@velobpa.com",
+    "url": "https://velobpa.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-oasys.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Velocity-BPA/n8n-nodes-oasys/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials --ext .ts",
+    "lint:fix": "eslint nodes credentials --ext .ts --fix",
+    "test": "jest",
+    "test:unit": "jest test/unit",
+    "test:integration": "jest test/integration",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/OasysNetwork.credentials.js",
+      "dist/credentials/OasysApi.credentials.js",
+      "dist/credentials/VerseCredentials.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Oasys/Oasys.node.js",
+      "dist/nodes/Oasys/OasysTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.0",
+    "gulp": "^4.0.2",
+    "jest": "^29.7.0",
+    "n8n-workflow": "^1.20.0",
+    "prettier": "^3.1.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.2",
+    "ethers": "^6.9.0",
+    "graphql-request": "^6.1.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
